@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+   <bean id="empbean" class="com.cg.spring.Employee">
+      <property name="empId" value="1001"></property>
+      <property name="empName" value="Ram"></property>
+      <property name="address" ref="addrbean" ></property>  
+   </bean>
+   
+    <bean id="empbean1" class="com.cg.spring.Employee">
+      <property name="empId" value="1002"></property>
+      <property name="empName" value="Sam"></property>
+      <property name="address" ref="addrbean1" ></property>  
+   </bean>
+    
+   <bean id="addrbean" class="com.cg.spring.Address">
+   	<property name="id" value="2001"></property>
+   	<property name="city" value="Chennai"></property>
+   </bean>
+   
+   <bean id="addrbean1" class="com.cg.spring.Address">
+   	<property name="id" value="2002"></property>
+   	<property name="city" value="Hyderabad"></property>
+   </bean>
+   
+  
+</beans> 
